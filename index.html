@@ -8,71 +8,136 @@
 </head>
 <body>
     <form action="">
-        <fieldset>
-            <legend>Personal Information</legend>
+        <h2>HTML Input Types:</h2>
 
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" value="Amima"> <br>
+        <h4>input type: password: </h4>
+        <label for="username">Username</label>
+            <input type="text" id="username" name="username"> <br> <br>
+        <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd">
+            <br> <br>
 
-        <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" value="Hoque">
-
-        <!-- Radio Button:  -->
-
+        <h4>input type: password: </h4>
         <p>Choose your favorite Web Language:</p>
-
-        <input type="radio" id="html" name="fav-language" value="HTML">
-            <label for="html">HTML</label>
-
-        <input type="radio" id="css" name="fav-language" value="CSS">
-            <label for="css">CSS</label>
-
-        <input type="radio" id="javascript" name="fav-language" value="JavaScript" checked>
-            <label for="javascript">JavaScript</label> <br>
-
-        <!-- Select Element : -->
-
-        <p>The select element defines a drop-down list: </p>
-
-        <label for="Learning-method">Choose a Learning Method:</label> <br> <br>
-            <select name="Learning-method" id="Learning-method">
-                <option value="virtual">Virtual</option>
-                <option value="buying-course">Buying Course</option>
-                <option value="training-center" selected>Training Center</option>
-                <option value="following-vdo">Following VDO</option>
-            </select>
+        <input type="radio" id="html" value="HTML">
+            <label for="html">HTML</label> <br> <br>
+        <input type="radio" id="css" value="CSS">
+            <label for="css">CSS</label> <br> <br>
+        <input type="radio" id="js" value="JavaScript" checked> 
+            <label for="js">JavaScript</label> <br> <br>
+        <input type="submit" value="Submit">
             <br> <br>
 
-        <!-- Button:  -->
-
-        <button type="button" onclick="alert ('Hello World!!!!')">Click Me</button>
-
+        <h4>input type: checkbox: </h4>
+        <p>The <strong>input type = "checkbox"</strong> defines a checkbox</p>
+        <p>Choose your favorite Web Language:</p>
+        <input type="checkbox" id="js" name="js" value="JavaScript">
+            <label for="js">I like JavaScript</label> <br> <br>
+        <input type="checkbox" id="py" name="py" value="Python" checked>
+            <label for="Python">I like Python</label> <br> <br>
+        <input type="checkbox" id="php" name="php" value="PHP">
+            <label for="php">I like PHP</label> <br> <br>
+        
+        <input type="submit" value="Submit">
             <br> <br>
 
-        <!-- Datalist:  -->
+        <h4>input type: button</h4>
+        
+        <input type="button" onclick="alert ('Hello World !!!')" value="Click Me!">
 
-        <input list="learning-method" name="learning-method">
-        <datalist id="learning-method">
-            <option value="Virtual">
-            <option value="Buying Course">
-            <option value="Training Center">
-            <option value="Following VDO">
-        </datalist>
-        <input type="submit">
-        <br> <br>
+        <h4>input type: number with restriction</h4>
 
-        <!-- Text Area : -->
+        <label for="quantity">Quantity (between 1 and 5)</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <br> <br>          
 
-        <textarea name="message" id="message" cols="70" rows="20">Please add some text here.</textarea>
-        <br> <br>
+        <h4>input type: number with numeric steps</h4>
+
+        <label for="quantity">Quantity (between 1 and 5)</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+        <br> <br>         
+        
+        <h4>input type: date with date picker</h4>
+
+        <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" id="birthday">
+            <br> <br>
+
+        <h4>input type: date with restriction</h4>
+
+        <label for="datemax">Enter a date after 2000-01-01:</label>
+            <input type="date" name="datemin" id="datemin" min="2000-01-02">
+            <br> <br>
+
+        <label for="datemax">Enter a date before 1980-1-01:</label>
+           <input type="date" name="datemax" id="datemax" min="1979-12-31">
+            <br> <br>
+
+        <h4>input type: color with color picker</h4>
+
+        <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" value="004fdc">
+            <br><br>
+
+        <h4>input type: range</h4>
+
+        <label for="vol">Volume (between 0 and 50)</label>
+            <input type="range" id="vol" name="vol" min="0" max="50">
+            <br> <br>
+
+        <h4>input type: month</h4>
+
+        <label for="bdaymonth">Birthday (Month and Year)</label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+            <br> <br>
+
+        <h4>input type: week</h4>
+
+        <label for="bdayweek">Birthday (week)</label>
+            <input type="week" id="bdayweek" name="bdayweek">
+            <br> <br>
+
+        <h4>input type: time</h4>
+
+        <label for="appt">Select a time</label>
+            <input type="time" id="appt" value="appt">
+            <br> <br>
+
+        <h4>input type: datetime</h4>
+
+        <label for="birthdaytime">Birthday (date and time)</label>
+            <input type="datetime-local" id="birthdaytime" value="birthdaytime">
+            <br> <br>
+
+        <h4>input type: email</h4>
+
+        <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email">
+            <br> <br>
+
+        <h4>input type: search</h4>
+
+        <label for="gsearch">Search Google:</label>
+            <input type="search" id="gsearch" name="gsearch">
+            <br> <br>
+
+        <h4>input type: tel</h4>
+
+        <label for="phone">Enter a phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+88 01***-******" pattern="" required>
+            <br> <br>
+
+        <h4>input type: url</h4>
+
+        <label for="homepage">Add your homepage:</label>
+            <input type="url" id="homepage" name="homepage">
+            <br> <br>
 
         
-        <!-- Submit Button:  -->
 
-        <input type="submit" value="Submit">     
-        <br> <br>
 
-        </fieldset>
+
+
     </form>
 </body>
 </html>
